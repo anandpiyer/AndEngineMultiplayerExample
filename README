@@ -1,1 +1,3 @@
-This is a desktop version of the AndEngine multiplayer example. Use the supplied Android client.
+This is a desktop version of the AndEngine multiplayer example. This version of the server periodically broadcasts a moveFace message to all the connected clients, the move position is random. 
+
+Use the supplied android client (apk file) as there is a minor change to the original example from the AndEngine example repository. The example was modified to create a face incase we receive a moveFace message and are unable to find it.
