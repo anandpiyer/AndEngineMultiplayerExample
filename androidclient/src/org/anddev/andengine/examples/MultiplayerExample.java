@@ -320,6 +320,10 @@ public class MultiplayerExample extends BaseExample implements ClientMessageFlag
 	}
 
 	public void moveFace(final int pID, final float pX, final float pY) {
+		/* If we cannot find the face, add it */
+		if (this.mFaces.get(pID) == null) {
+			this.addFace(pID, pX, pY);
+		}
 		/* Find and move the face. */
 		final Sprite face = this.mFaces.get(pID);
 		face.setPosition(pX - face.getWidth() * 0.5f, pY - face.getHeight() * 0.5f);
